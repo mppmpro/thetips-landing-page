@@ -3,3 +3,4 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/mppmagco/thetips.mppm-ag.com/
     - /bin/cp index.html "$DEPLOYPATH"
+    - /bin/cp -R assets "$DEPLOYPATH"
