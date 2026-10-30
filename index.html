@@ -45,6 +45,34 @@
 .back-to-top:focus-visible{outline:3px solid #006f88;outline-offset:4px}
 @media(max-width:800px){.hero p{font-size:19px}.lede{font-size:19px}.intro-person small{font-size:13px}.author-intro{padding:65px 0}.back-to-top{right:14px;bottom:16px;padding:10px 12px}.eyebrow{font-size:11px}}
 @media(max-width:420px){.links .button{font-size:12px}.back-to-top span{display:none}.back-to-top{width:48px;height:48px;padding:0}.preview figcaption{font-size:13px}.demo{font-size:12px}}
+
+/* Versão 4: títulos editoriais consistentes e ritmo entre seções */
+.author-intro h2{font-weight:normal;letter-spacing:-.045em;font-size:clamp(39px,5vw,64px);line-height:1.1;margin:15px auto 22px;max-width:950px}
+.author-intro{padding-top:76px;padding-bottom:52px}
+.author-intro + .section{padding-top:64px}
+@media(max-width:800px){.author-intro{padding-top:58px;padding-bottom:36px}.author-intro + .section{padding-top:55px}.author-intro h2{font-size:clamp(34px,7vw,44px);line-height:1.12}}
+
+/* Versão 5 — tipografia editorial unificada.
+   A mesma família do título "Viajar bem também é saber escolher."
+   é aplicada a todos os títulos, preservando tamanhos e hierarquia. */
+.hero h1,
+.section h2,
+.author-intro h2,
+.benefit h3,
+.author-card h3,
+.logo {
+  font-family: Georgia, "Times New Roman", serif;
+}
+/* Mantém títulos de seção impactantes, sem alterar texto de apoio e botões. */
+.author-intro h2 {
+  font-size: clamp(39px, 5vw, 64px);
+  font-weight: normal;
+  letter-spacing: -.045em;
+  line-height: 1.1;
+}
+@media (max-width:800px) {
+  .author-intro h2 { font-size: clamp(34px, 7vw, 44px); line-height:1.12; }
+}
 </style>
 </head>
 <body>
