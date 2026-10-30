@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/mppmagco/thetips.mppm-ag.com/
+    - /bin/cp -R index.html assets "$DEPLOYPATH"
