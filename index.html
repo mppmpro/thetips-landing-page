@@ -148,6 +148,129 @@ h2{font-size:42px}.collection-heading h2{font-size:42px}.collection-heading .eye
 .map-pin span small{white-space:nowrap}
 @media(max-width:700px){.hotspot-detail{width:calc(100% - 22px);max-height:91vh}.hotspot-detail-inner{display:block}.hotspot-cover{padding:25px 15px 20px}.hotspot-cover img{width:130px;max-height:180px}.hotspot-info{padding:28px 25px 30px}.hotspot-info .eyebrow{font-size:9px;margin-bottom:14px}.hotspot-info h2{font-size:30px;margin-bottom:12px}.hotspot-info>p:not(.eyebrow):not(.hotspot-note):not(.hotspot-signature){font-size:13px;margin-bottom:17px}.hotspot-signature{font-size:17px;margin-bottom:18px}.hotspot-facts{margin-bottom:16px}.hotspot-primary{font-size:11px}.hotspot-close{top:10px;right:11px}}
 @media(prefers-reduced-motion:reduce){.hotspot-detail{scroll-behavior:auto}}
+
+/* THE TIPS — Hero editorial experimental, V1. Reversível e isolado. */
+.brand-world{
+  min-height:clamp(590px,53vw,750px)!important;
+  display:flex!important;
+  justify-content:flex-start!important;
+  align-items:center!important;
+  padding:88px max(6.5vw,38px)!important;
+  text-align:left!important;
+  background-color:#efe7dd!important;
+  background-image:linear-gradient(90deg,rgba(247,240,230,.97) 0%,rgba(247,240,230,.91) 29%,rgba(247,240,230,.55) 46%,rgba(247,240,230,.04) 66%),url('assets/hero-editorial-the-tips.webp')!important;
+  background-size:cover!important;
+  background-position:center center!important;
+  border-bottom:0!important;
+}
+.brand-world .hero-world{display:none!important}
+.brand-world .intro-copy{
+  flex:0 1 730px!important;
+  margin:0!important;
+  padding:0!important;
+  width:100%!important;
+  max-width:730px!important;
+  text-align:left!important;
+  position:relative;z-index:1;
+}
+.brand-world h1{color:#24211e!important;font-size:clamp(43px,4.9vw,75px)!important;line-height:1.12!important;letter-spacing:-2.3px!important;margin:0 0 26px!important}
+.brand-world h1 span{display:block;white-space:normal!important}
+.brand-world .intro-text{margin:0 0 29px!important;max-width:510px!important;color:#49423b!important;font-size:clamp(16px,1.25vw,19px)!important;line-height:1.72!important}
+.brand-world .hero-actions{justify-content:flex-start!important;gap:25px!important}
+.brand-world .hero-actions .button.dark{background:#27231f!important;border-color:#27231f!important;color:#fff!important;padding:16px 24px!important;font-size:15px!important}
+.brand-world .hero-actions .underlined{color:#27231f!important;border-bottom-color:#27231f!important;font-size:15px!important}
+@media(max-width:1050px){
+.brand-world{min-height:620px!important;padding:66px 5vw!important;background-position:53% center!important;
+background-image:linear-gradient(90deg,rgba(247,240,230,.99) 0%,rgba(247,240,230,.94) 41%,rgba(247,240,230,.45) 65%,rgba(247,240,230,.03) 100%),url('assets/hero-editorial-the-tips.webp')!important}
+.brand-world .intro-copy{max-width:600px!important}
+.brand-world h1{font-size:clamp(42px,5.1vw,64px)!important}
+}
+@media(max-width:700px){
+.brand-world{min-height:710px!important;align-items:flex-start!important;padding:51px 25px 360px!important;background-position:67% bottom!important;background-size:auto 100%!important;
+background-image:linear-gradient(180deg,rgba(247,240,230,.98) 0%,rgba(247,240,230,.97) 40%,rgba(247,240,230,.5) 58%,rgba(247,240,230,0) 80%),url('assets/hero-editorial-the-tips.webp')!important}
+.brand-world .intro-copy{max-width:none!important}
+.brand-world h1{font-size:clamp(36px,9.6vw,49px)!important;letter-spacing:-1.4px!important;line-height:1.14!important;margin-bottom:22px!important}
+.brand-world .intro-text{font-size:16px!important;line-height:1.55!important;max-width:365px!important;margin-bottom:26px!important;color:#423d38!important}
+.brand-world .hero-actions{align-items:flex-start!important;gap:17px!important;flex-wrap:wrap!important}
+.brand-world .hero-actions .button.dark{font-size:13px!important;padding:14px 18px!important}
+.brand-world .hero-actions .underlined{font-size:13px!important}
+}
+@media(max-width:390px){.brand-world{min-height:750px!important;padding:42px 19px 340px!important}.brand-world h1{font-size:35px!important}.brand-world .hero-actions{gap:12px!important}}
+
+
+/* V5 — Régua editorial aplicada SOMENTE aos blocos de texto.
+   Hero, imagens, carrossel, mapa, cards e fundos preservam as dimensões da V3. */
+@media (min-width:1200px) {
+  /* Hero: espaço externo de 100px até o texto, sem recortar a imagem de fundo. */
+  .brand-world { padding-left:100px!important; }
+  /* A coleção conserva o carrossel full width; apenas sua chamada textual recua. */
+  .collection-heading.container { padding-left:100px!important; }
+  /* Áreas de conteúdo textual dentro de seções que já têm margem de 64px. */
+  .atlas-heading { padding-left:36px!important; }
+  .founders-intro { padding-left:36px!important; }
+  .faq-section.container { padding-left:100px!important; }
+  .manifesto-section, .closing { padding-left:100px!important; padding-right:100px!important; }
+}
+@media (min-width:701px) and (max-width:1199px) {
+  /* Redução gradual das margens em notebooks e tablets. */
+  .brand-world { padding-left:clamp(42px,6vw,72px)!important; }
+  .collection-heading.container { padding-left:clamp(42px,6vw,72px)!important; }
+  .atlas-heading, .founders-intro { padding-left:clamp(7px,2vw,30px)!important; }
+  .faq-section.container { padding-left:clamp(42px,6vw,72px)!important; }
+  .manifesto-section, .closing { padding-left:clamp(42px,6vw,72px)!important; padding-right:clamp(42px,6vw,72px)!important; }
+}
+@media (max-width:700px) {
+  /* Mobile: preserva os recuos existentes e os 24px do texto no hero. */
+  .brand-world { padding-left:24px!important; padding-right:24px!important; }
+  .atlas-heading, .founders-intro { padding-left:0!important; }
+}
+@media (max-width:390px) {
+  .brand-world { padding-left:20px!important; padding-right:20px!important; }
+}
+
+
+
+/* V6 — alinhamento textual específico da seção da coleção.
+   Mantém cards/imagens full width, mas alinha rótulos, textos e controles ao mesmo eixo editorial. */
+@media (min-width:1200px) {
+  #colecao .collection-toolbar.container,
+  #colecao .extra-filters.container,
+  #colecao .carousel-cue.container,
+  #colecao .rail-footer.container { padding-left:100px!important; padding-right:100px!important; }
+  #colecao .stage-label { left:100px!important; }
+  #colecao .destination-meta { padding-left:100px!important; }
+}
+@media (min-width:701px) and (max-width:1199px) {
+  #colecao .collection-toolbar.container,
+  #colecao .extra-filters.container,
+  #colecao .carousel-cue.container,
+  #colecao .rail-footer.container { padding-left:clamp(42px,6vw,72px)!important; padding-right:clamp(42px,6vw,72px)!important; }
+  #colecao .stage-label { left:clamp(42px,6vw,72px)!important; }
+  #colecao .destination-meta { padding-left:clamp(42px,6vw,72px)!important; }
+}
+@media (max-width:700px) {
+  #colecao .collection-toolbar.container,
+  #colecao .extra-filters.container,
+  #colecao .carousel-cue.container,
+  #colecao .rail-footer.container { padding-left:24px!important; padding-right:24px!important; }
+  #colecao .stage-label { left:24px!important; }
+  #colecao .destination-meta { padding-left:24px!important; }
+}
+
+
+/* V7 — foco em conversão: benefícios e um único popup informativo para Roma. */
+.value-section{max-width:1600px;margin:0 auto;padding:64px 100px 68px;border-bottom:1px solid #e7e4df;display:grid;grid-template-columns:.8fr 1.7fr;gap:65px;align-items:start;background:#fff}
+.value-intro .eyebrow{font-size:13px!important;letter-spacing:.08em}.value-intro h2{font-size:clamp(34px,3.1vw,49px)!important;line-height:1.13;margin-top:17px}.value-intro h2 em{font-weight:400;font-style:italic}
+.value-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}.value-grid article>span{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:#777}.value-grid h3{font-family:var(--display);font-size:26px;line-height:1.17;margin:15px 0 13px}.value-grid p{font-size:15px;line-height:1.75;color:#68645f;margin:0}
+.collection-conversion-line{margin:13px 0 0;font-size:16px;line-height:1.55;color:#706c67}.collection-heading{align-items:center}
+.sales-dialog{width:min(1050px,calc(100% - 34px));max-height:90dvh;padding:0;border-radius:12px;overflow-y:auto;overscroll-behavior:contain;scroll-padding-top:20px;box-shadow:0 16px 90px #0004}
+.sales-dialog-head{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:15px 24px;background:#fff;border-bottom:1px solid #e5e2de}.sales-dialog-head .eyebrow{font-size:11px!important;margin:0}.sales-dialog-head .hotspot-close{position:static;width:42px;height:42px;font-size:28px;line-height:1;cursor:pointer;background:#f3f2ef;border-radius:50%;color:#222}
+.sales-intro{display:grid;grid-template-columns:.75fr 1.25fr;gap:35px;padding:38px}.sales-cover{display:flex;align-items:start;justify-content:center;background:#f3f2ef;border-radius:8px;padding:32px}.sales-cover img{width:100%;max-width:315px;height:auto;max-height:470px;object-fit:contain;box-shadow:8px 12px 25px #0002}.sales-main .eyebrow{font-size:11px!important}.sales-main h2{font-family:var(--display);font-size:clamp(36px,3.6vw,56px);line-height:1.08;letter-spacing:-1px;margin:12px 0 20px}.sales-main h2 em{font-style:italic;font-weight:400}.sales-main>p:not(.eyebrow){font-size:17px;line-height:1.7;color:#57534f}.sales-chips{display:flex;flex-wrap:wrap;gap:7px;margin:21px 0 26px}.sales-chips span{font-size:12px;padding:7px 10px;border:1px solid #dedbd5;border-radius:4px;color:#595650}.sales-main h3{font-family:var(--display);font-size:28px;margin:0 0 14px}.sales-benefits{padding-left:20px;margin:0 0 23px}.sales-benefits li{font-size:15px;line-height:1.6;margin:8px 0}.sales-actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center}.sales-actions .button{border-radius:7px;font-size:14px;padding:14px 19px}.sales-meta{font-size:12px;color:#777}
+.sales-preview{scroll-margin-top:60px;background:#f5f4f1;padding:36px 38px}.sales-preview>.eyebrow{font-size:11px!important}.sales-preview h3{font-family:var(--display);font-size:34px;margin:10px 0}.sales-preview>p:not(.eyebrow){font-size:15px;color:#666}.sales-preview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}.sales-preview-grid figure{margin:0}.sales-preview-grid img{width:100%;height:260px;object-fit:contain;background:white;box-shadow:0 2px 12px #0001}.sales-preview-grid figcaption{font-size:12px;color:#777;margin-top:9px}
+.sales-offer{display:grid;grid-template-columns:1.2fr .8fr;gap:25px;align-items:center;padding:40px 38px}.sales-offer h3{font-family:var(--display);font-size:32px;margin:9px 0 12px;line-height:1.17}.sales-offer p:not(.eyebrow){font-size:15px;color:#666;line-height:1.6;margin:0}.sales-offer-cta{display:flex;flex-direction:column;align-items:flex-start;gap:10px}.sales-offer-cta .button{width:100%;border-radius:7px;justify-content:center;font-size:14px;padding:15px;opacity:.67;cursor:not-allowed}.sales-offer-cta small{font-size:11px;line-height:1.45;color:#777}
+@media (min-width:701px) and (max-width:1199px){.value-section{padding:50px clamp(42px,6vw,72px);gap:30px}.value-grid{gap:18px}.sales-intro{gap:22px;padding:28px}}
+@media(max-width:700px){.value-section{padding:40px 24px;display:block}.value-intro h2{font-size:36px!important;margin:13px 0 27px}.value-grid{grid-template-columns:1fr;gap:23px}.value-grid h3{font-size:27px;margin:8px 0}.value-grid p{font-size:15px}.collection-conversion-line{font-size:14px}.sales-dialog{width:calc(100% - 16px);max-height:94dvh}.sales-dialog-head{padding:10px 15px}.sales-dialog-head .eyebrow{font-size:10px!important}.sales-intro{display:block;padding:20px}.sales-cover{max-height:240px;padding:17px;margin-bottom:22px}.sales-cover img{max-width:135px;max-height:206px}.sales-main h2{font-size:35px}.sales-main>p:not(.eyebrow){font-size:15px}.sales-main h3{font-size:26px}.sales-benefits li{font-size:14px}.sales-actions .button{width:100%;justify-content:center}.sales-preview{padding:25px 20px}.sales-preview h3{font-size:29px}.sales-preview-grid{display:flex;overflow-x:auto;gap:12px;scroll-snap-type:x mandatory}.sales-preview-grid figure{flex:0 0 70%;scroll-snap-align:start}.sales-preview-grid img{height:250px}.sales-offer{display:block;padding:28px 20px}.sales-offer h3{font-size:30px}.sales-offer-cta{margin-top:22px}}
+
 </style><meta name="theme-color" content="#f5f5f3"><style id="thetips-readable-typography-v2">
 /* THE TIPS — V2: escala tipográfica da primeira landing page Roma.
    Preserva mapa, hotspots, identidade neutra e interações originais. */
@@ -271,22 +394,106 @@ h2,.collection-heading h2,.atlas-heading h2{font-family:var(--display);font-size
  .formats-copy .format-item > span,.format-item > span {font-size:12px;letter-spacing:.035em}
 }
 </style>
+
+<style id="thetips-hero-refinement-v2">
+/* Refinamento do preview: texto levemente deslocado à esquerda no desktop;
+   hero compacto com fotografia apenas como suporte no mobile. */
+@media (min-width: 1051px) {
+  .brand-world .intro-copy {transform:translateX(-72px);}
+}
+@media (min-width: 701px) and (max-width: 1050px) {
+  .brand-world .intro-copy {transform:translateX(-24px);}
+}
+@media (max-width: 700px) {
+  .brand-world {
+    min-height:610px!important;
+    padding:32px 23px 220px!important;
+    align-items:flex-start!important;
+    justify-content:flex-start!important;
+    background-color:#f7f0e6!important;
+    background-image:
+      linear-gradient(180deg, #f7f0e6 0%, rgba(247,240,230,.99) 44%, rgba(247,240,230,.88) 57%, rgba(247,240,230,.12) 82%, rgba(247,240,230,0) 100%),
+      url('assets/hero-editorial-the-tips.webp')!important;
+    background-size:100% 100%, auto 355px!important;
+    background-position:center center, 63% bottom!important;
+    background-repeat:no-repeat!important;
+  }
+  .brand-world .intro-copy {transform:none!important;max-width:100%!important;}
+  .brand-world h1 {font-size:clamp(34px,9.2vw,45px)!important;margin-bottom:17px!important;}
+  .brand-world .intro-text {font-size:16px!important;line-height:1.5!important;margin-bottom:20px!important;}
+  .brand-world .hero-actions {gap:13px!important;}
+  .brand-world .hero-actions .button.dark {padding:12px 16px!important;}
+}
+@media (max-width:390px) {
+  .brand-world {min-height:605px!important;padding:29px 19px 218px!important;background-size:100% 100%, auto 345px!important;}
+  .brand-world h1 {font-size:35px!important;}
+}
+</style>
+
+<style id="thetips-hero-harmony-v3">
+/* Harmoniza o enquadramento do hero com o inicio da colecao, sem alterar as demais secoes. */
+@media (min-width: 1051px) {
+  .brand-world {
+    flex-direction:row!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    min-height:590px!important;
+    padding:50px max(6vw,36px)!important;
+    background-position: center center!important;
+  }
+  .brand-world .intro-copy {
+    flex:0 1 660px!important;
+    width:100%!important;
+    max-width:660px!important;
+    transform:none!important;
+  }
+  .collection-section {padding-top:52px!important;}
+  .collection-heading {margin-bottom:30px!important;}
+}
+@media (min-width:701px) and (max-width:1050px) {
+  .brand-world {
+    flex-direction:row!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    min-height:560px!important;
+    padding:46px 5vw!important;
+  }
+  .brand-world .intro-copy {transform:none!important;max-width:560px!important;}
+  .collection-section {padding-top:50px!important;}
+}
+@media (max-width:700px) {
+  .brand-world {
+    flex-direction:column!important;
+    align-items:flex-start!important;
+    min-height:565px!important;
+    padding:29px 23px 195px!important;
+    background-size:100% 100%,auto 310px!important;
+    background-position:center center,63% bottom!important;
+  }
+  .collection-section {padding-top:38px!important;}
+  .collection-heading {margin-bottom:23px!important;}
+}
+@media (max-width:390px) {
+  .brand-world {min-height:585px!important;padding:28px 19px 185px!important;background-size:100% 100%,auto 300px!important;}
+}
+</style>
 </head><body>
 <header class="site-header"><nav class="header-left"><a href="#colecao">A coleção</a><a href="#mapa">O mapa</a></nav><a class="wordmark brand-logo" href="#" aria-label="The Tips, início"><img src="assets/img-d918be07f44f.svg" alt="The Tips"></a><div class="header-right"><a href="#sobre">Sobre nós</a><button class="search-trigger" aria-label="Buscar um destino" onclick="focusSearch()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></button></div></header>
 <main>
 <section class="brand-intro brand-world" aria-labelledby="intro-title">
 <div class="hero-world" aria-hidden="true"><img src="assets/img-7409391e2ae3.svg" alt=""></div>
-<div class="intro-copy"><h1 id="intro-title"><span>Seu próximo destino</span><span>começa com <em>um olhar.</em></span></h1><p class="intro-text">Uma curadoria de cidades, regiões e experiências por Bruna Rezende e Maria Victoria Horta. Descobertas que viram dicas. Dicas que transformam a sua viagem.</p><div class="hero-actions"><a class="button dark" href="#colecao">Encontre seu guide <span>↗</span></a><a class="underlined" href="#mapa">Explore o mapa <span>↗</span></a></div></div>
+<div class="intro-copy"><h1 id="intro-title"><span>Seu próximo</span><span>destino</span><span>começa com</span><span><em>um olhar.</em></span></h1><p class="intro-text">Guias com lugares selecionados, experiências especiais e roteiros organizados para você planejar melhor cada destino. Menos tempo pesquisando. Mais tempo vivendo a viagem.</p><div class="hero-actions"><a class="button dark" href="#colecao">Explorar os guias <span>↗</span></a><a class="underlined" href="#mapa">Explore o mapa <span>↗</span></a></div></div>
 
 </section>
-<section id="colecao" class="collection-section"><div class="collection-heading container"><div><p class="eyebrow">THE TRAVEL COLLECTION</p><h2>Para onde o seu olhar te leva?</h2></div><button class="underlined map-trigger" onclick="document.getElementById('mapa').scrollIntoView({behavior:'smooth'})">Explorar pelo mapa <span>↗</span></button></div><div class="collection-toolbar container"><div class="filters" role="group" aria-label="Tipo de destino"><button class="active" data-filter="all" onclick="setFilter('all')" aria-pressed="true">Todos os destinos</button><button data-filter="city" onclick="setFilter('city')" aria-pressed="false">Cidades</button><button data-filter="region" onclick="setFilter('region')" aria-pressed="false">Regiões</button></div><label class="catalog-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><input id="catalog-search" type="search" placeholder="Busque seu guide: destino ou interesse" aria-label="Busque seu guide por cidade, região ou interesse" oninput="renderCatalog()"></label></div><div class="extra-filters container"><label>Seu interesse <select id="interest-filter" onchange="renderCatalog()"><option value="">Todos os interesses</option><option value="gastronomia">Gastronomia</option><option value="igrejas">Igrejas e arte</option><option value="hoteis">Hotéis</option><option value="roteiros">Roteiros</option><option value="compras">Compras</option><option value="escapadas">Escapadas</option></select></label><button id="saved-toggle" onclick="toggleSaved()" aria-pressed="false">♡ Meus guides salvos <span id="saved-count">0</span></button></div><div class="carousel-cue container"><span>City Guides & Region Guides</span><span id="rail-instruction">Deslize ou use as setas para explorar <b aria-hidden="true">← &nbsp; →</b></span></div><div class="catalog-shell"><div id="destination-rail" class="destination-rail" tabindex="0" aria-label="Carrossel de guias por cidade e região" aria-roledescription="carrossel"></div><div id="empty-results" class="empty-results" hidden><h3>Nenhum destino encontrado.</h3><p>Tente outro nome ou explore a coleção completa.</p><button class="underlined" onclick="resetCatalog()">Ver todos os destinos ↗</button></div></div><div class="rail-footer container"><span id="catalog-caption" aria-live="polite"></span><div class="rail-controls"><button id="grid-toggle" class="grid-toggle" onclick="toggleGrid()" aria-pressed="false">Ver em grade</button><button id="prev-card" class="arrow" onclick="moveRail(-1)" aria-label="Destinos anteriores">←</button><button id="next-card" class="arrow" onclick="moveRail(1)" aria-label="Próximos destinos">→</button></div></div></section>
-<section id="mapa" class="atlas-section container" aria-labelledby="atlas-title"><div class="atlas-heading"><p class="eyebrow">THE TIPS / THE WORLD IS YOURS</p><h2 id="atlas-title">Um mundo de<br>próximas descobertas.</h2><p>Encontre uma cidade. Explore uma região.<br>Escolha por onde a sua viagem começa.</p><button class="underlined" onclick="document.getElementById('map-dialog').showModal()">Ampliar o mapa <span>↗</span></button></div><div class="atlas-content"><div class="map-canvas inline-map"><img src="assets/img-7409391e2ae3.svg" alt="Mapa-múndi com destinos disponíveis na coleção"><button class="map-pin" onclick="selectMapCountry('Itália')" aria-label="Explorar Itália: Roma" aria-pressed="true"><i></i><span>ITÁLIA <small>1 curadoria ↗</small></span></button></div><div class="map-explorer" data-map-explorer><div class="map-destination-nav" role="group" aria-label="Destinos disponíveis no mapa"></div><div class="atlas-destinations" id="atlas-destinations" aria-live="polite"></div></div><p class="atlas-note">Cada novo destino, um novo ponto de vista. A coleção está só começando.</p></div></section><section class="manifesto-section"><p class="eyebrow">THE TIPS, THE WAY YOU TRAVEL</p><h2>Menos tempo pesquisando.<br>Mais tempo vivendo a viagem.</h2><p>Dos clássicos imperdíveis às descobertas menos óbvias.<br>Reunimos o que vale conhecer e organizamos o que você precisa saber.</p></section>
+<section class="value-section" aria-labelledby="value-title"><div class="value-intro"><p class="eyebrow">O JEITO THE TIPS DE VIAJAR</p><h2 id="value-title">Mais viagem.<br><em>Menos pesquisa.</em></h2></div><div class="value-grid"><article><span>01 / TEMPO</span><h3>Vá direto ao que importa.</h3><p>Reunimos em um só lugar informações práticas, endereços e experiências para você gastar menos tempo procurando por onde começar.</p></article><article><span>02 / CURADORIA</span><h3>Escolhas com repertório.</h3><p>Descubra cidades e regiões pelo olhar de Bruna Rezende e Maria Victoria Horta, com recomendações que vão além de uma lista de atrações.</p></article><article><span>03 / ROTEIROS</span><h3>Aproveite os seus dias.</h3><p>Encontre sugestões organizadas por interesse e duração, conforme o conteúdo disponível em cada destino.</p></article></div></section>
+<section id="colecao" class="collection-section"><div class="collection-heading container"><div><p class="eyebrow">THE TRAVEL COLLECTION</p><h2>Para onde o seu olhar te leva?</h2><p class="collection-conversion-line">Escolha um destino e veja o que há no guia antes de decidir.</p></div><button class="underlined map-trigger" onclick="document.getElementById('mapa').scrollIntoView({behavior:'smooth'})">Explorar pelo mapa <span>↗</span></button></div><div class="collection-toolbar container"><div class="filters" role="group" aria-label="Tipo de destino"><button class="active" data-filter="all" onclick="setFilter('all')" aria-pressed="true">Todos os destinos</button><button data-filter="city" onclick="setFilter('city')" aria-pressed="false">Cidades</button><button data-filter="region" onclick="setFilter('region')" aria-pressed="false">Regiões</button></div><label class="catalog-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><input id="catalog-search" type="search" placeholder="Busque seu guide: destino ou interesse" aria-label="Busque seu guide por cidade, região ou interesse" oninput="renderCatalog()"></label></div><div class="extra-filters container"><label>Seu interesse <select id="interest-filter" onchange="renderCatalog()"><option value="">Todos os interesses</option><option value="gastronomia">Gastronomia</option><option value="igrejas">Igrejas e arte</option><option value="hoteis">Hotéis</option><option value="roteiros">Roteiros</option><option value="compras">Compras</option><option value="escapadas">Escapadas</option></select></label><button id="saved-toggle" onclick="toggleSaved()" aria-pressed="false">♡ Meus guides salvos <span id="saved-count">0</span></button></div><div class="carousel-cue container"><span>City Guides & Region Guides</span><span id="rail-instruction">Deslize ou use as setas para explorar <b aria-hidden="true">← &nbsp; →</b></span></div><div class="catalog-shell"><div id="destination-rail" class="destination-rail" tabindex="0" aria-label="Carrossel de guias por cidade e região" aria-roledescription="carrossel"></div><div id="empty-results" class="empty-results" hidden><h3>Nenhum destino encontrado.</h3><p>Tente outro nome ou explore a coleção completa.</p><button class="underlined" onclick="resetCatalog()">Ver todos os destinos ↗</button></div></div><div class="rail-footer container"><span id="catalog-caption" aria-live="polite"></span><div class="rail-controls"><button id="grid-toggle" class="grid-toggle" onclick="toggleGrid()" aria-pressed="false">Ver em grade</button><button id="prev-card" class="arrow" onclick="moveRail(-1)" aria-label="Destinos anteriores">←</button><button id="next-card" class="arrow" onclick="moveRail(1)" aria-label="Próximos destinos">→</button></div></div></section>
+<section id="mapa" class="atlas-section container" aria-labelledby="atlas-title"><div class="atlas-heading"><p class="eyebrow">THE TIPS / THE WORLD IS YOURS</p><h2 id="atlas-title">Um mundo de<br>próximas descobertas.</h2><p>Escolha um destino no mapa e conheça a curadoria, os roteiros e as páginas do guia disponível.</p><button class="underlined" onclick="document.getElementById('map-dialog').showModal()">Ampliar o mapa <span>↗</span></button></div><div class="atlas-content"><div class="map-canvas inline-map"><img src="assets/img-7409391e2ae3.svg" alt="Mapa-múndi com destinos disponíveis na coleção"><button class="map-pin" onclick="selectMapCountry('Itália')" aria-label="Explorar Itália: Roma" aria-pressed="true"><i></i><span>ITÁLIA <small>1 curadoria ↗</small></span></button></div><div class="map-explorer" data-map-explorer><div class="map-destination-nav" role="group" aria-label="Destinos disponíveis no mapa"></div><div class="atlas-destinations" id="atlas-destinations" aria-live="polite"></div></div><p class="atlas-note">Cada novo destino, um novo ponto de vista. A coleção está só começando.</p></div></section><section class="manifesto-section"><p class="eyebrow">THE TIPS, THE WAY YOU TRAVEL</p><h2>Menos tempo pesquisando.<br>Mais tempo vivendo a viagem.</h2><p>Dos clássicos imperdíveis às descobertas menos óbvias.<br>Reunimos o que vale conhecer e organizamos o que você precisa saber.</p></section>
 <section id="guias" class="formats-section"><div class="formats-art discoveries-photo"><img class="discoveries-image" src="assets/img-731253236955.jpg" alt="Um café com mesas ao ar livre e vegetação, fotografia original do guide The Tips" loading="lazy"><div class="discoveries-seal"><img src="assets/img-d918be07f44f.svg" alt="The Tips"></div><p>Cidades.<br>Regiões.<br><em>Descobertas.</em></p><span class="discoveries-credit">UM OLHAR DE DENTRO DO GUIDE / ROMA</span></div><div class="formats-copy"><p class="eyebrow">UMA COLEÇÃO. DIFERENTES FORMAS DE EXPLORAR.</p><h2>Cada destino.<br>O seu jeito de viajar.</h2><div class="format-item"><span>01</span><div><h3>O guia completo</h3><p>A curadoria do destino em um só lugar. Informações práticas, endereços selecionados e roteiros para montar a viagem no seu ritmo.</p></div></div><div class="format-item"><span>02</span><div><h3>Guias por interesse</h3><p>Gastronomia, arte, igrejas, compras ou escapadas. Escolha os temas disponíveis em cada destino e crie a sua própria combinação.</p></div></div><div class="format-item"><span>03</span><div><h3>Roteiros por duração</h3><p>Uma passagem breve ou dias para explorar com calma. Encontre, em cada coleção, as opções de roteiro para o tempo que você tem.</p></div></div><a class="underlined" href="#colecao">Encontre seu próximo guia <span>↗</span></a></div></section>
 <section id="sobre" class="founders-section container"><div class="founders-intro"><p class="eyebrow">THE EYES BEHIND THE TIPS</p><h2>Duas histórias.<br>Uma curadoria.</h2><p>Um endereço que surpreende. Uma experiência que fica. Conheça quem pesquisa, descobre e escolhe cada dica da coleção.</p></div><div class="founders-photos">
 <article class="founder-card"><div class="founder-portrait"><img src="assets/img-57a79172ae46.jpg" alt="Bruna Rezende em uma visita cultural, fotografia original do guide" loading="lazy"><span>01 / BRUNA</span></div><div class="founder-story"><p class="eyebrow">MODA, HOSPITALIDADE & DESCOBERTAS</p><div class="founder-name"><h3>Bruna Rezende</h3></div><p>Desde muito cedo, entendi que viajar me leva a conhecer o desconhecido, enriquece a alma, apresenta outras culturas e muda o repertório.</p><p>Meu trabalho no universo da moda e da hospitalidade me proporcionou viver experiências únicas em diversas cidades e países e mudou a maneira como enxergo o mundo.</p></div></article>
 <article class="founder-card"><div class="founder-portrait"><img src="assets/img-7cc86b758dec.jpg" alt="Maria Victoria Horta, fotografia original do guide" loading="lazy"><span>02 / MARIA VICTORIA</span></div><div class="founder-story"><p class="eyebrow">COMUNICAÇÃO, LIFESTYLE & VIAGENS</p><div class="founder-name"><h3>Maria Victoria Horta</h3></div><p>Minha trajetória reúne empreendedorismo, comunicação, PR, marketing, lifestyle e viagens. Já conheci mais de 63 países, em experiências pessoais e profissionais.</p><p>Como apresentadora do Cultura & Design, da TV Cultura, estive à frente do quadro “É Pra Lá Que Eu Vou”, transformando essa paixão em trabalho.</p><p>Gosto de pesquisar, descobrir, selecionar e compartilhar o que há de diferente, atual e especial em cada lugar.</p></div></article>
-</div></section><section class="faq-section container"><div><p class="eyebrow">SOBRE OS GUIAS</p><h2>Antes de partir.</h2></div><div class="faq-list"><details><summary>Como encontro o guia para a minha viagem?<span>+</span></summary><p>Explore a coleção por cidade ou região, ou use a busca por destino. Dentro de cada coleção, você encontra o material completo e os temas e roteiros disponíveis.</p></details><details><summary>Qual a diferença entre o completo e os avulsos?<span>+</span></summary><p>O guia completo reúne a curadoria do destino em um único material. Os avulsos se aprofundam em um interesse ou organizam a viagem por duração. A seleção de formatos varia de acordo com cada destino.</p></details><details><summary>Os guias são digitais?<span>+</span></summary><p>Sim. Os guias The Tips são materiais em PDF para consultar enquanto você planeja a viagem e durante o percurso. O guia completo de Roma conta com índice clicável.</p></details></div></section>
-<section class="closing"><p class="eyebrow">CITIES. REGIONS. NEW PERSPECTIVES.</p><h2>A próxima descoberta<br>começa com um olhar.</h2><a class="underlined" href="#colecao">Encontre seu guide <span>↗</span></a></section>
+</div></section><section class="faq-section container"><div><p class="eyebrow">SOBRE OS GUIAS</p><h2>Antes de partir.</h2></div><div class="faq-list"><details><summary>Como encontro o guia para a minha viagem?<span>+</span></summary><p>Explore a coleção por cidade ou região, ou use a busca por destino. Dentro de cada coleção, você encontra o material completo e os temas e roteiros disponíveis.</p></details><details><summary>Qual a diferença entre o completo e os avulsos?<span>+</span></summary><p>O guia completo reúne informações práticas, endereços e roteiros em um único PDF. Guias temáticos ou roteiros separados podem ser oferecidos conforme cada destino; confirme as opções disponíveis na página do produto.</p></details><details><summary>Os guias são digitais?<span>+</span></summary><p>Sim. Os guias The Tips são materiais em PDF para consultar enquanto você planeja a viagem e durante o percurso. O guia completo de Roma conta com índice clicável.</p></details><details><summary>Por que escolher um guia em vez de pesquisar tudo por conta própria?<span>+</span></summary><p>Você pode pesquisar por conta própria. O diferencial do The Tips é reunir uma seleção editorial de lugares, informações práticas e roteiros organizados para facilitar o planejamento e reduzir o tempo gasto comparando opções.</p></details><details><summary>O que vou receber ao adquirir o guia de Roma?<span>+</span></summary><p>Um PDF digital em português, com índice clicável e conteúdos sobre hospedagem, gastronomia, atrações, compras, escapadas e roteiros de 24h, 48h, 3 e 5 dias. A forma de acesso será apresentada na oferta da Hotmart quando estiver configurada.</p></details><details><summary>Onde encontro o preço e as condições de compra?<span>+</span></summary><p>Esta versão ainda é uma demonstração. Preço, condições comerciais, acesso e eventual política de reembolso serão informados na oferta oficial antes de qualquer compra.</p></details></div></section>
+<section class="closing"><p class="eyebrow">CITIES. REGIONS. NEW PERSPECTIVES.</p><h2>Sua próxima viagem<br>começa com boas escolhas.</h2><a class="underlined" href="#colecao">Encontre seu guide <span>↗</span></a></section>
 </main><footer class="site-footer container"><a class="wordmark footer-logo" href="#" aria-label="The Tips, início"><img src="assets/img-d918be07f44f.svg" alt="The Tips"></a><p>BRUNA REZENDE & MARIA VICTORIA HORTA</p><button class="implementation-link" onclick="document.getElementById('implementation-dialog').showModal()">Notas para implantação na Hotmart</button><a href="#">Voltar ao início ↑</a></footer>
 <dialog id="guide-dialog" aria-labelledby="dialog-title"><div class="modal-top"><span class="eyebrow">THE TIPS / ROMA</span><button class="close-modal" aria-label="Fechar opções" onclick="closeGuide()">×</button></div><div class="modal-intro"><span>LA CITTÀ ETERNA</span><h2 id="dialog-title">Roma, do <em>seu jeito.</em></h2><p>Escolha como você quer descobrir a cidade.</p></div><div class="modal-tabs" role="tablist" aria-label="Formato do guia"><button role="tab" id="full-tab" aria-controls="full-panel" onclick="setTab('full')">Guia completo</button><button role="tab" id="topics-tab" aria-controls="topics-panel" onclick="setTab('topics')">Guias avulsos</button><button role="tab" id="preview-tab" aria-controls="preview-panel" onclick="setTab('preview')">Por dentro do guide</button></div><div id="full-panel" role="tabpanel" aria-labelledby="full-tab"><div class="modal-full"><img src="assets/img-37636fa311d2.jpg" alt="Capa do guia completo de Roma"><div><span class="eyebrow">TODA A CURADORIA EM UM GUIA</span><h3>Roma completo</h3><p>Uma seleção de endereços, experiências e informações práticas para montar a sua viagem.</p><ul><li>Onde ficar, comer e passear</li><li>Igrejas, compras e passeios fora da cidade</li><li>Roteiros de 24h, 48h, 3 e 5 dias</li><li>Índice clicável para navegar pelo guia</li></ul><div class="guide-specs"><span>PDF digital</span><span>Em português</span><span>Consulta no celular</span></div><button class="button dark" onclick="showSelection('Roma completo')">Selecionar guia completo <span>↗</span></button></div></div></div><div id="topics-panel" role="tabpanel" aria-labelledby="topics-tab" hidden><p class="topic-instruction">Selecione um tema para conhecer o conteúdo.</p><div id="topic-grid"></div><div id="topic-detail" aria-live="polite"></div></div><div id="preview-panel" role="tabpanel" aria-labelledby="preview-tab" hidden><div class="preview-heading"><div><p class="eyebrow">UM PRIMEIRO OLHAR</p><h3>Abra. Explore. Imagine a viagem.</h3></div><span>Páginas do guide de Roma</span></div><div class="page-previews"><figure><img src="assets/img-b0b3a0db93ac.jpg" alt="Página original do guia com informações essenciais de Roma" loading="lazy"><figcaption>01 / Essentials</figcaption></figure><figure><img src="assets/img-9c4775816ab1.jpg" alt="Página original de gastronomia do guia de Roma" loading="lazy"><figcaption>02 / Eat & Drink</figcaption></figure><figure><img src="assets/img-d66cec4a98db.jpg" alt="Página original de igrejas do guia de Roma" loading="lazy"><figcaption>03 / Churches</figcaption></figure></div><p class="preview-description">Uma amostra da identidade e da organização do material. No guia completo, a curadoria reúne informações práticas, endereços e roteiros.</p><button class="underlined" onclick="setTab('full')">Voltar ao guia completo <span>↗</span></button></div><div id="checkout-note" role="status" hidden></div><p class="modal-footnote">Prévia de navegação. Valores e links de compra da Hotmart serão incluídos na versão final.</p></dialog>
 <dialog id="bios" aria-labelledby="bio-title"><div class="modal-top"><span class="eyebrow">THE TIPS / ABOUT US</span><button class="close-modal" aria-label="Fechar histórias" onclick="document.getElementById('bios').close()">×</button></div><h2 id="bio-title">Prazer, <em>The Tips.</em></h2><div class="bio-grid"><article><img src="assets/img-57a79172ae46.jpg" alt="Bruna Rezende"><h3>Bruna Rezende</h3><p>O trabalho no universo da moda e da hospitalidade levou Bruna a viver experiências em diversas cidades e países. Viajar ampliou seu repertório e transformou sua maneira de enxergar o mundo.</p></article><article><img src="assets/img-7cc86b758dec.jpg" alt="Maria Victoria Horta"><h3>Maria Victoria Horta</h3><p>Com uma trajetória em empreendedorismo, comunicação, PR e lifestyle, Maria Victoria também transformou a paixão por viajar em trabalho como apresentadora do quadro “É Pra Lá Que Eu Vou”, do Cultura & Design, da TV Cultura.</p></article></div></dialog>
@@ -351,7 +558,7 @@ function renderCatalog(){
  const matches=destinations.filter(d=>(currentFilter==='all'||d.type===currentFilter)&&(!savedOnly||savedGuides.includes(d.id))&&(!interest||d.interests.includes(interest))&&normalize([d.name,d.country,d.continent,d.description,...d.topics.flat()].join(' ')).includes(term));
  rail.innerHTML=matches.map(d=>{
   const matchingTopics=term?d.topics.map((topic,index)=>({topic,index})).filter(({topic})=>normalize(topic.join(' ')).includes(term)):[];
-  return `<article class="destination-card"><div class="destination-visual"><button class="save-guide" onclick="toggleFavorite('${d.id}')" aria-label="${savedGuides.includes(d.id)?'Remover dos salvos':'Salvar guide'}: ${d.name}" aria-pressed="${savedGuides.includes(d.id)}">${savedGuides.includes(d.id)?'♥':'♡'}</button><button class="destination-stage" onclick="openDestination('${d.id}')" aria-label="${d.action}: ${d.name}"><span class="stage-label">${d.typeLabel}</span>${d.cover?`<div class="product-book"><img src="${d.cover}" alt="Capa do guia The Tips ${d.name}"></div>`:`<div class="product-book region-book"><span>THE TIPS</span><b>${d.coverTitle||d.name}</b><img src="${d.image}" alt="Costa italiana na região do Argentario"><small>CHIC GETAWAY FROM ROME</small></div>`}<span class="stage-circle" aria-hidden="true">↗</span></button></div><div class="destination-meta"><p class="destination-location">${d.country.toUpperCase()} / ${d.continent.toUpperCase()}</p><h3>${d.name}</h3><p>${d.formats}</p>${matchingTopics.slice(0,3).map(({topic,index})=>`<button class="topic-match" onclick="openDestination('${d.id}',${index})">${topic[0]} ↗</button>`).join('')}<br><button class="underlined" onclick="openDestination('${d.id}')">${d.action} <span>↗</span></button></div></article>`;
+  return `<article class="destination-card"><div class="destination-visual"><button class="save-guide" onclick="toggleFavorite('${d.id}')" aria-label="${savedGuides.includes(d.id)?'Remover dos salvos':'Salvar guide'}: ${d.name}" aria-pressed="${savedGuides.includes(d.id)}">${savedGuides.includes(d.id)?'♥':'♡'}</button><button class="destination-stage" onclick="openMapGuide('${d.id}')" aria-label="${d.action}: ${d.name}"><span class="stage-label">${d.typeLabel}</span>${d.cover?`<div class="product-book"><img src="${d.cover}" alt="Capa do guia The Tips ${d.name}"></div>`:`<div class="product-book region-book"><span>THE TIPS</span><b>${d.coverTitle||d.name}</b><img src="${d.image}" alt="Costa italiana na região do Argentario"><small>CHIC GETAWAY FROM ROME</small></div>`}<span class="stage-circle" aria-hidden="true">↗</span></button></div><div class="destination-meta"><p class="destination-location">${d.country.toUpperCase()} / ${d.continent.toUpperCase()}</p><h3>${d.name}</h3><p>${d.formats}</p>${matchingTopics.slice(0,3).map(({topic,index})=>`<button class="topic-match" onclick="openDestination('${d.id}',${index})">${topic[0]} ↗</button>`).join('')}<br><button class="underlined" onclick="openMapGuide('${d.id}')">${d.action} <span>↗</span></button></div></article>`;
  }).join('');
  const showPlaceholders=!term&&!interest&&!savedOnly&&currentFilter==='all';
  if(showPlaceholders)rail.insertAdjacentHTML('beforeend',[2,3,4].map(number=>`<article class="destination-card placeholder-card" aria-label="Espaço reservado para um futuro guide"><div class="destination-stage"><span class="stage-label">ESPAÇO RESERVADO / ${String(number).padStart(2,'0')}</span><div class="placeholder-book" aria-hidden="true"><img src="assets/img-d918be07f44f.svg" alt=""><span>Próximo<br><em>guide</em></span></div></div><div class="destination-meta"><h3>Próximo guide</h3><p>Marcação de layout para novos destinos.<br>Conteúdo a definir.</p></div></article>`).join(''));
@@ -383,7 +590,7 @@ function selectMapDestination(id){
   panel.innerHTML=`<div class="atlas-destination-detail"><img src="${d.image}" alt="${d.name}, ${d.country}"><div class="atlas-destination-copy"><span class="eyebrow">${d.country.toUpperCase()} / ${d.typeLabel}</span><h3>${d.name}</h3><p>${d.description}</p></div><button class="button map-guide-cta" onclick="openMapGuide('${d.id}')">Ver guide de ${d.name} <span>↗</span></button></div>`;
  });
 }
-function openMapGuide(id){if(mapDialog.open)mapDialog.close();openDestination(id);}
+function openMapGuide(id){if(mapDialog.open)mapDialog.close();if(id==='roma'){openRomaHotspot();return;}openDestination(id);}
 function selectMapCountry(country){const d=destinations.find(item=>item.country===country);if(d)selectMapDestination(d.id);}
 rail.addEventListener('scroll',updateRailControls,{passive:true});window.addEventListener('resize',updateRailControls);
 rail.addEventListener('keydown',event=>{if(event.target===rail&&(event.key==='ArrowLeft'||event.key==='ArrowRight')){event.preventDefault();moveRail(event.key==='ArrowLeft'?-1:1);}});
@@ -420,28 +627,18 @@ function renderMap(){
 }
 renderMap();renderCatalog();setTab('full');
 </script>
-<dialog id="hotspot-roma-dialog" class="hotspot-detail" aria-labelledby="hotspot-roma-title" aria-describedby="hotspot-roma-desc">
- <div class="hotspot-detail-inner">
-  <button type="button" class="hotspot-close" id="hotspot-roma-close" aria-label="Fechar apresentação de Roma">×</button>
-  <div class="hotspot-cover"><img src="assets/img-37636fa311d2.jpg" alt="Capa do guia The Tips — Roma" loading="lazy"></div>
-  <div class="hotspot-info">
-   <p class="eyebrow">THE TIPS / EUROPA / ITÁLIA</p>
-   <h2 id="hotspot-roma-title">Roma, além do óbvio.</h2>
-   <p id="hotspot-roma-desc">Um guia com curadoria de lugares, sabores e experiências para descobrir a Cidade Eterna no seu ritmo.</p>
-   <div class="hotspot-facts"><span>Guia digital</span><span>Roteiros e experiências</span><span>Curadoria The Tips</span></div>
-   <p class="hotspot-signature">Dois olhares. Uma cidade cheia de histórias.</p>
-   <button type="button" class="button hotspot-primary" id="hotspot-roma-guide">Conhecer o guia de Roma <span aria-hidden="true">↗</span></button>
-   <p class="hotspot-note">Prévia do projeto. A compra será habilitada após a configuração dos produtos e do checkout na Hotmart.</p>
-  </div>
- </div>
+<dialog id="hotspot-roma-dialog" class="hotspot-detail sales-dialog" aria-labelledby="hotspot-roma-title" aria-describedby="hotspot-roma-desc">
+ <div class="sales-dialog-head"><span class="eyebrow">THE TIPS / ITÁLIA / GUIA DIGITAL</span><button type="button" class="hotspot-close" id="hotspot-roma-close" aria-label="Fechar apresentação de Roma">×</button></div>
+ <div class="sales-intro"><div class="sales-cover"><img src="assets/img-37636fa311d2.jpg" alt="Capa original do guia The Tips Roma" loading="lazy"></div><div class="sales-main"><p class="eyebrow">MENOS PLANEJAMENTO. MAIS DESCOBERTAS.</p><h2 id="hotspot-roma-title">Roma, <em>além do óbvio.</em></h2><p id="hotspot-roma-desc">Saiba onde ficar, o que experimentar e como aproveitar seus dias na Cidade Eterna com uma seleção de experiências e informações práticas organizada por quem ama descobrir lugares.</p><div class="sales-chips"><span>PDF em português</span><span>Índice clicável</span><span>Roteiros prontos para consultar</span></div><h3>O que você encontra no guia</h3><ul class="sales-benefits"><li>Onde ficar, comer e passear</li><li>Arte, igrejas, compras e passeios além da cidade</li><li>Roteiros de 24 horas, 48 horas, 3 e 5 dias</li><li>Endereços e informações reunidos para facilitar suas escolhas</li></ul><div class="sales-actions"><a href="#roma-amostra" class="button dark" id="sales-preview-link">Ver páginas do guia <span>↘</span></a><span class="sales-meta">Conheça o conteúdo antes de decidir</span></div></div></div>
+ <div class="sales-preview" id="roma-amostra"><p class="eyebrow">VEJA POR DENTRO DO GUIDE</p><h3>Um primeiro olhar sobre Roma.</h3><p>Estas são páginas reais de amostra do guia completo.</p><div class="sales-preview-grid"><figure><img src="assets/img-b0b3a0db93ac.jpg" alt="Página do guia com informações essenciais de Roma" loading="lazy"><figcaption>Essentials</figcaption></figure><figure><img src="assets/img-9c4775816ab1.jpg" alt="Página do guia sobre gastronomia em Roma" loading="lazy"><figcaption>Eat & Drink</figcaption></figure><figure><img src="assets/img-d66cec4a98db.jpg" alt="Página do guia sobre igrejas de Roma" loading="lazy"><figcaption>Churches</figcaption></figure></div></div>
+ <div class="sales-offer"><div><p class="eyebrow">SUA VIAGEM COMEÇA ANTES DO EMBARQUE</p><h3>Tenha a curadoria de Roma à mão.</h3><p>Guia digital completo para consultar no planejamento e durante a viagem. Preço e condições de acesso serão apresentados na oferta oficial.</p></div><div class="sales-offer-cta"><button type="button" class="button dark" disabled aria-disabled="true">Compra ainda não habilitada</button><small>Checkout Hotmart em configuração. Nenhum pagamento é realizado nesta demonstração.</small></div></div>
 </dialog>
 
 <script>
 (function(){
  const modal=document.getElementById('hotspot-roma-dialog');
  const close=document.getElementById('hotspot-roma-close');
- const cta=document.getElementById('hotspot-roma-guide');
- if(!modal||!close||!cta)return;
+ if(!modal||!close)return;
  window.openRomaHotspot=function(){
    if(!modal.showModal){window.openDestination?.('roma');return;}
    const other=document.getElementById('map-dialog');if(other?.open)other.close();
@@ -450,7 +647,8 @@ renderMap();renderCatalog();setTab('full');
  };
  close.addEventListener('click',()=>modal.close());
  modal.addEventListener('click',event=>{if(event.target===modal)modal.close()});
- cta.addEventListener('click',()=>{modal.close();if(typeof openDestination==='function')openDestination('roma')});
+ const preview=document.getElementById('sales-preview-link');
+ preview?.addEventListener('click',event=>{event.preventDefault();document.getElementById('roma-amostra')?.scrollIntoView({block:'start',behavior:'smooth'});});
 })();
 </script>
 </body></html>
