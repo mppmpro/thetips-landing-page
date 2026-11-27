@@ -645,6 +645,31 @@ h2,.collection-heading h2,.atlas-heading h2{font-family:var(--display);font-size
  .brand-world .intro-text {font-size:13.5px!important;line-height:1.5!important}
 }
 </style>
+
+<style id="thetips-v19-hero-world-map">
+/* V19: mapa cinza aprovado, tipografia e CTAs seguem como HTML acessível. */
+.brand-world {
+  background-color:#f7f6f4!important;
+  background-image:url("assets/thetips-hero-mapa-mundi-cinza.webp")!important;
+  background-repeat:no-repeat!important;
+  background-size:cover!important;
+  background-position:center center!important;
+}
+.brand-world::after {
+  background:linear-gradient(90deg,rgba(250,249,248,.86) 0%,rgba(250,249,248,.54) 33%,rgba(250,249,248,0) 66%)!important;
+}
+.brand-world .hero-world {display:none!important}
+@media (max-width:700px) {
+  .brand-world {
+    background-color:#f7f6f4!important;
+    background-size:100% auto!important;
+    background-position:center 42%!important;
+  }
+  .brand-world::after {
+    background:linear-gradient(180deg,rgba(250,249,248,.84) 0%,rgba(250,249,248,.60) 56%,rgba(250,249,248,.44) 100%)!important;
+  }
+}
+</style>
 </head><body>
 <header class="site-header"><nav class="header-left"><a href="#colecao">A coleção</a><a href="#mapa">O mapa</a></nav><a class="wordmark brand-logo" href="#" aria-label="The Tips, início"><img src="assets/thetips-identidade-logo.svg" alt="The Tips"></a><div class="header-right"><a href="#sobre">Sobre nós</a><button class="search-trigger" aria-label="Buscar um destino" onclick="focusSearch()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></button></div></header>
 <main>
